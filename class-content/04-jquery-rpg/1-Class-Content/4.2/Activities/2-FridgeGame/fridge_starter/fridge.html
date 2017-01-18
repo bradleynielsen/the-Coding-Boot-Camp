@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Fridge Magnets</title>
+	</head>
+	<style>
+		body { background: url(fridge.png) no-repeat; }
+
+		.letter { width: 30px; height:30px; border-style: solid; padding: 2px; float: left; margin: 2px; }
+
+		.letter-button-color { color: darkcyan; }
+
+		.fridge-color { color: orange; }
+
+		#display { margin-top:78px; height:500px; width:220px; margin-left:60px; }
+
+		#buttons { padding-top:60px; }
+
+		#clear { margin-left: 20px; font-size: 25px; color: black; border-style: solid; width: 100px; }
+	</style>
+
+<body>
+	<div id="display"></div>
+	<div id="buttons"></div>
+	<button id="clear">clear</button>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+
+	$( document ).ready(function() {
+		//we store all the letters and underscore inside of an array called letters
+		var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","_"];
+
+		/*
+		REMEMBER USE jQuery!
+
+		step 1: loop over the letters
+			step 2: inside the loop
+				* make a variable named b
+					* set it equal to a button with
+						- the following classes: letter-button letter letter-button-color
+						- a data-let attribute set equal to letters[i]
+						- text of letters[i]
+				* step 3: append b to the div with an id of buttons
+		*/
+
+
+	    $('.letter-button').on('click', function() {
+	    	/*
+	    		Step 4:
+
+	    		* inside this anonymous function that gets passed to the click event
+	    			* create a variable called fridgeMagnet
+	    				* set the variable equal to a new div
+	    					* with the following classes: letter fridge-color
+	    					* chain this on:
+	    						.text($(this).data('let'))
+	    	*/
+
+
+			/* Step 5: append the fridgeMagnet variable to the element with an id of display */
+
+		});
+
+	    //Step 6: on the element with an id of clear, attach an on click function
+	    	/*
+	    		Step 7: inside this anonymous function that gets passed to the click event
+	    			* use the empty() function on the element with an id of display
+	    	*/
+
+	});
+
+</script>
+</body>
+</html>

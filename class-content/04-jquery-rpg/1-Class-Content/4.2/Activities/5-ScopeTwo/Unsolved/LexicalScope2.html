@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure</title>
+</head>
+<body>
+<script>
+var cat = {
+    name: "Gus",
+    color: "gray",
+    age: 15,
+
+    printInfo: function() {
+        console.log(this);
+        console.log("Name:", this.name, "Color:", this.color, "Age:", this.age); // What will this print?
+
+        nestedFunction = function() {
+            console.log(this);
+            console.log("Name:", this.name, "Color:", this.color, "Age:", this.age); // What will this print?
+        }
+
+        nestedFunction();
+    }
+}
+
+cat.printInfo(); // calls the printInfo function. Which subsequently calls the nestedFunction()
+</script>
+
+</body>
+</html>

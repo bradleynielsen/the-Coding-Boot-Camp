@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiplayer Rocks Paper Scissors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Rock Paper Scissors</h1>
+  </header>
+  <div id="sizer">
+    <div id="swapzone"><input id="username" placeholder="Name"/>
+      <button id="start">Start</button>
+    </div>
+    <div id="currentturn">
+    </div>
+    <div id="gamediv">
+      <div id="player1">
+        <h3 id="player1name">Player1</h3>
+        <ul>
+        </ul>
+        <div id="player1chosen"></div>
+        <div class="outcomes">
+          <div class="outcometrackers" id="player1wins"></div>
+          <div class="outcometrackers" id="player1losses"></div>
+        </div>
+      </div>
+      <div id="result">
+
+      </div>
+      <div id="player2">
+        <h3 id="player2name">Player2</h3>
+        <ul>
+        </ul>
+        <div id="player2chosen"></div>
+        <div class="outcomes">
+          <div class="outcometrackers" id="player2wins"></div>
+          <div class="outcometrackers" id="player2losses"></div>
+        </div>
+      </div>
+    </div>
+    <div id="chat">
+      <div id="chatmessages"></div>
+      <div id="chatbar">
+        <input id="chatinput" />
+        <button id="chatsend">Send</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

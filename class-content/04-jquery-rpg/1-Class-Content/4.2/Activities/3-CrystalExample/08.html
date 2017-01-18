@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>simple crystal game</title>
+  <style type="text/css">
+  	/*
+  		we threw in some styling to make the picture fit on the page better
+	*/
+    .crystalImage {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+
+<p><span id="number"></span></p>
+
+<!-- we added this image -->
+<div id="crystals">
+  <img src="http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg" alt="crystals" class="crystalImage">
+</div>
+
+<!-- we added jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+  $( document ).ready(function() {
+
+    var numberToGuess = 50;
+
+    var counter = 0;
+
+    $('#number').text(numberToGuess);
+
+    $('.crystalImage').on('click', function(){
+      counter = counter + 10;
+      
+      if (counter == numberToGuess){
+        alert('You won!!!! It was 50');
+      }
+    });
+
+  });
+</script>
+</body>
+</html>
